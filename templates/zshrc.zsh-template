@@ -42,11 +42,11 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 # Mac OSX
-##plugins=(apache2-macports autojump battery bower bundler bwana colored-man colorize command-not-found composer copydir copyfile cp dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol macports mysql-macports node npm nyan osx pj rsync safe-paste ssh-agent sublime symfony2 torrent urltools vagrant vundle)
+##plugins=(apache2-macports autojump battery bower bundler bwana colored-man colorize command-not-found composer copydir copyfile cp dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol macports mysql-macports node npm nyan osx pj rsync safe-paste ssh-agent sublime symfony2 torrent urltools vagrant vundle zsh-syntax-highlighting)
 # Ubuntu
-##plugins=(autojump battery bower colored-man colorize command-not-found composer cp debian dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol node npm nyan rsync safe-paste ssh-agent sublime supervisor symfony2 tmux tmuxinator torrent urltools vagrant vundle yum)
+##plugins=(autojump battery bower colored-man colorize command-not-found composer cp debian dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol node npm nyan rsync safe-paste ssh-agent sublime supervisor symfony2 tmux tmuxinator torrent urltools vagrant vundle yum zsh-syntax-highlighting)
 # CentOS
-##plugins=(autojump battery bower colored-man colorize command-not-found composer cp dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol node npm nyan rsync safe-paste ssh-agent sublime supervisor symfony2 tmux tmuxinator torrent urltools vagrant vundle yum)
+##plugins=(autojump battery bower colored-man colorize command-not-found composer cp dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol node npm nyan rsync safe-paste ssh-agent sublime supervisor symfony2 tmux tmuxinator torrent urltools vagrant vundle yum zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
