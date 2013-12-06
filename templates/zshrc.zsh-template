@@ -37,19 +37,231 @@ COMPLETION_WAITING_DOTS="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# Uncomment following line if you want to  shown in the command execution time stamp
+# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
+# yyyy-mm-dd
+# HIST_STAMPS="mm/dd/yyyy"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(
+  autojump
+)
+
+# Git
+plugins=(
+  "${plugins[@]}"
+  git
+  git-extras
+  git-flow
+  # git-flow-avh
+  # git-hubflow
+  # git-prompt
+  # git-remote-branch
+  # gitfast
+  # github
+  gitignore
+)
+
+# Ruby & Rails
+plugins=(
+  "${plugins[@]}"
+  bundler
+  capistrano
+  chruby
+  gem
+  jruby
+  rails
+  rails3
+  rails4
+  rake
+  rbenv
+  ruby
+  rvm
+)
+
+# Python
+plugins=(
+  "${plugins[@]}"
+  # django
+  # pip
+  # pyenv
+  # pylint
+  # python
+)
+
 # Mac OSX
-##plugins=(apache2-macports autojump battery bower bundler bwana colored-man colorize command-not-found composer copydir copyfile cp dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol macports mysql-macports node npm nyan osx pj rsync safe-paste ssh-agent sublime symfony2 torrent urltools vagrant vundle zsh-syntax-highlighting)
+plugins=(
+  "${plugins[@]}"
+  # apache2-macports
+  # brew
+  # forklift
+  # gnu-utils
+  # macports
+  # mysql-macports
+  # osx
+  # pod
+  # terminalapp
+  # xcode
+)
+
 # Ubuntu
-##plugins=(autojump battery bower colored-man colorize command-not-found composer cp debian dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol node npm nyan rsync safe-paste ssh-agent sublime supervisor symfony2 tmux tmuxinator torrent urltools vagrant vundle yum zsh-syntax-highlighting)
+plugins=(
+  "${plugins[@]}"
+)
+
 # CentOS
-##plugins=(autojump battery bower colored-man colorize command-not-found composer cp dircycle dirpersist emoji-clock encode64 extract fasd git git-extras git-flow history history-substring-search jira laravel last-working-dir lol node npm nyan rsync safe-paste ssh-agent sublime supervisor symfony2 tmux tmuxinator torrent urltools vagrant vundle yum zsh-syntax-highlighting)
+plugins=(
+  "${plugins[@]}"
+)
+
+# Archlinux
+plugins=(
+  "${plugins[@]}"
+  # archlinux
+)
+
+# Unknown
+plugins=(
+  # ant
+  # autoenv
+  # autopep8
+  # battery
+  # bower
+  # bwana
+  # cabal
+  # cake
+  # celery
+  # cloudapp
+  # coffee
+  # colemak
+  colored-man
+  # colorize
+  command-not-found
+  # common-aliases
+  # compleat
+  composer
+  # copydir
+  # copyfile
+  # cp
+  # cpanm
+  # debian
+  # dircycle
+  dirpersist
+  # docker
+  emoji-clock
+  encode64
+  extract
+  # fabric
+  # fasd
+  # fastfile
+  # fbterm
+  # gas
+  # go
+  # golang
+  # gpg-agent
+  # gradle
+  # grails
+  # heroku
+  history
+  history-substring-search
+  # jake-node
+  # jira
+  # jump
+  # kate
+  # knife
+  # knife_ssh
+  laravel
+  last-working-dir
+  # lein
+  # lighthouse
+  # lol
+  # mercurial
+  # mix
+  # mosh
+  # mvn
+  # nanoc
+  node
+  npm
+  nvm
+  # nyan
+  # pass
+  # pep8
+  per-directory-history
+  perl
+  # phing
+  # pj
+  postgres
+  # pow
+  # powder
+  # powify
+  # profiles
+  rand-quote
+  # rbfu
+  # rebar
+  # redis-cli
+  # repo
+  # rsync
+  # safe-paste
+  sbt
+  scala
+  # screen
+  sfffe
+  # singlechar
+  # sprunge
+  ssh-agent
+  sublime
+  sudo
+  # supervisor
+  # suse
+  # svn
+  # symfony
+  symfony2
+  # systemadmin
+  # systemd
+  # taskwarrior
+  # terminitor
+  # textmate
+  # themes
+  # thor
+  # tmux
+  # tmuxinator
+  torrent
+  urltools
+  vagrant
+  # vi-mode
+  # virtualenv
+  # virtualenvwrapper
+  vundle
+  # wakeonlan
+  # wd
+  # web-search
+  # yum
+  # z
+  # zeus
+)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
 PROJECT_PATHS=(~/Projects)
+
+# User configuration
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export MANPATH="/usr/local/man:$MANPATH"
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+# ssh
+export SSH_KEY_PATH="~/.ssh/rsa_id"
